@@ -8,19 +8,26 @@ title: Toolz – HOME
     <div id="page1">
         <form name="formular" id="number_form" autocomplete="off">
             <div class="fieldrow">
-                <div class="fieldcontainer">
-                    <label for="loco_class">Baureihe</label>
-                    <input type="text" id="loco_class" required placeholder="261" minlength="2" />
-                </div>
-                <div class="fieldcontainer">
-                    <label for="indenture_number">Ordnungsnummer</label>
-                    <input type="text" id="indenture_number" required placeholder="011" maxlength="4" minlength="2" />
-                </div>
+                {% include inputWithLabel.html
+                    id='loco_class'
+                    title='Baureihe'
+                    placeholder='261'
+                    minlength='2' 
+                %}
+                {% include inputWithLabel.html
+                    id='indenture_number'
+                    title='Ordnungsnummer'
+                    placeholder='011'
+                    minlength='2'
+                %}
             </div>
             <ul class="checklist">
                 {% for radio in site.data.locoClassCodes.options %}
                     <li>
-                        {% include radioWithLabel.html value=radio.value title=radio.title name=site.data.locoClassCodes.name %}
+                        {% include radioWithLabel.html
+                            name=site.data.locoClassCodes.name
+                            value=radio.value title=radio.title
+                        %}
                     </li>
                 {% endfor %}
             </ul>

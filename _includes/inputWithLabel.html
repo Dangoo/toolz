@@ -1,0 +1,11 @@
+{% comment %}Calculating uniquie ID for input.{% endcomment %}
+{% capture generatedID %}input_{% increment inputCounter %}{% endcapture %}
+
+{% capture inputID %}{{include.id | default: generatedID}}{% endcapture %}
+
+{% capture type %}{{include.type | default: 'text'}}{% endcapture %}
+
+<div class="fieldcontainer">
+    <label for="{{inputID}}">{{include.title}}</label>
+    <input type="{{type}}" id="{{inputID}}" required placeholder="{{include.placeholder}}" minlength="{{include.minlength}}" />
+</div>

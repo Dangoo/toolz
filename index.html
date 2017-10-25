@@ -18,13 +18,9 @@ title: Toolz – HOME
                 </div>
             </div>
             <ul class="checklist">
-                {{site.data.test}}
-                {% for foo in site.data.test.test %}
-                    {{ foo }}
-                {% endfor %}
                 {% for radio in site.data.locoClassCodes.options %}
                     <li>
-                        {% include radioWithLabel.html radio name=site.data.locoClassCodes.name %}
+                        {% include radioWithLabel.html value=radio.value title=radio.title name=site.data.locoClassCodes.name %}
                     </li>
                 {% endfor %}
             </ul>

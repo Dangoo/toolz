@@ -178,7 +178,7 @@ function main() {
 		var indentureNumber = nodes.indentureNumberInputNode.value;
 		var typeCode = parseInt(
 			document.querySelector(
-				'input[name="bauartcode"][type="radio"]:checked'
+				'input[name="bauartcodes"][type="radio"]:checked'
 			).value
 		);
 

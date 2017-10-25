@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png" required />
+        <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" required />
+        <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">aktualisiere Deinen Browser</a> oder <a href="http://www.google.com/chromeframe/?redirect=true">aktiviere das Google Chrome Frame</a> um Dein Erlebnis zu verbessern.</p>
+        <![endif]-->
+
+        <div class="container">
+            <h1>Loknummern&shy;generator</h1>
+            <div id="page1">
+                <form name="formular" id="number_form" autocomplete="off">
+                    <div class="fieldrow">
+                        <div class="fieldcontainer">
+                            <label for="loco_class">Baureihe</label>
+                            <input type="text" id="loco_class" required placeholder="261" minlength="2"/>
+                        </div>
+                        <div class="fieldcontainer">
+                            <label for="indenture_number">Ordnungsnummer</label>
+                            <input type="text" id="indenture_number" required placeholder="011"  maxlength="4" minlength="2"/>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio0" data-type-code="90" required />
+                            <label for="radio0"></label>
+                            <label for="radio0" class="radio_label">Sonderfahrzeug (z.B. Dampflok)</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio1" data-type-code="91" required />
+                            <label for="radio1"></label>
+                            <label for="radio1" class="radio_label">Elektrolokomotive (Vmax &gt; 100 km/h)</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio2" data-type-code="92" required />
+                            <label for="radio2"></label>
+                            <label for="radio2" class="radio_label">Diesellokomotive (Vmax &gt; 100 km/h)</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio3" data-type-code="93" required />
+                            <label for="radio3"></label>
+                            <label for="radio3" class="radio_label">Elektroschnelltriebwagen</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio4" data-type-code="94" required />
+                            <label for="radio4"></label>
+                            <label for="radio4" class="radio_label">Elektrotriebwagen</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio5" data-type-code="95" required />
+                            <label for="radio5"></label>
+                            <label for="radio5" class="radio_label">Dieseltriebwagen</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio6" data-type-code="96" required />
+                            <label for="radio6"></label>
+                            <label for="radio6" class="radio_label">Beiwagen</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio7" data-type-code="97" required />
+                            <label for="radio7"></label>
+                            <label for="radio7" class="radio_label">Elektrolokomotive (Vmax &lt; 100km/h)</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio8" data-type-code="98" required />
+                            <label for="radio8"></label>
+                            <label for="radio8" class="radio_label">Diesellokomotive (Vmax &lt; 100km/h)</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="regular-radio" name="bauartcode" id="radio9" data-type-code="99" required />
+                            <label for="radio9"></label>
+                            <label for="radio9" class="radio_label">Bahndienst-Fahrzeug</label>
+                        </li>
+                    </ul>
+
+                    <button class="button" id="compute" type="submit">Berechnen</button>
+                </form>
+            </div>
+            <div id="page2">
+                <button id="back_button" type="button" name="Zurück">&#x25C0; Zurück</button>
+                <div id="edv_number"></div>
+                <div id="uic_number"></div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

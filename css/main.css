@@ -105,10 +105,11 @@ body {
     display: flex;
     box-sizing: border-box;
     padding: 1em 0 2em;
-    background: url(../img/gravita.jpg) 0 0 no-repeat;
+    background-image: url(../img/gravita.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    background-attachment: fixed;
     font-family: 'Din1451 Mittelschrift', Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -116,18 +117,22 @@ body {
     color: #333;
 }
 
+main {
+    margin: auto;
+}
+
 .container {
     box-sizing: border-box;
     position: relative;
-    margin: auto;
     width: 100%;
     max-width: 460px;
     padding: 2.5em 2em;
+    margin-bottom: .5em;
     background: url(../img/beta_flag.png) 95% 0 no-repeat;
     background-size: 10%;
     background-color: rgba(255,255,255,0.85);
     border-radius: 10px;
-    box-shadow: 0 7px 24px rgba(0,0,0,0.75),
+    box-shadow: 0 7px 18px rgba(0,0,0,0.75),
                 inset 0 1px 0 rgba(255,255,255,0.5),
                 inset 0 -1px 1px rgba(0,0,0,0.25);
 }
@@ -301,14 +306,44 @@ ul.checklist {
     cursor: pointer;
     margin-top: .125em;
     margin-left: .5em;
+}
+
+.radio_label,
+.meta-bar a {
     transition: transform .1s ease-in;
     transform-origin: 0 50%;
 }
 
 .regular-radio:hover ~ .radio_label,
 .regular-radio:focus ~ .radio_label,
-.radio_label:hover {
+.radio_label:hover,
+.meta-bar a:hover {
     transform: scale(1.05);
+}
+
+.meta-bar {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: .75em;
+    padding: 0 2em;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    text-shadow: 0 0 2px rgba(0,0,0,0.75);
+}
+
+.meta-bar a,
+.meta-bar a:visited {
+    color: inherit;
+}
+
+.meta-bar a {
+    display: inline-block;
+    transform-origin: 50%;
+    transition-property: transform, color;
+}
+
+.meta-bar a:hover {
+    color: rgba(255,255,255,0.65);
 }
 
 

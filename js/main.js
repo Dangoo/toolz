@@ -179,7 +179,7 @@ function main() {
 		var typeCode = parseInt(
 			document.querySelector(
 				'input[name="bauartcode"][type="radio"]:checked'
-			).dataset['typeCode']
+			).value
 		);
 
 		var current = new engine(typeCode, normalizeLocoClass(locoClass), indentureNumber, '80', 'D-DB');

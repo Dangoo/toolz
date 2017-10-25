@@ -1,0 +1,45 @@
+{
+  "name": "bauartcodes",
+  "options": [
+    {
+      "value": 90,
+      "title": "Sonderfahrzeug (z.B. Dampflok)"
+    },
+    {
+      "value": 91,
+      "title": "Elektrolokomotive (Vmax &gt; 100 km/h)"
+    },
+    {
+      "value": 92,
+      "title": "Diesellokomotive (Vmax &gt; 100 km/h)"
+    },
+    {
+      "value": 93,
+      "title": "Elektroschnelltriebwagen"
+    },
+    {
+      "value": 94,
+      "title": "Elektrotriebwagen"
+    },
+    {
+      "value": 95,
+      "title": "Dieseltriebwagen"
+    },
+    {
+      "value": 96,
+      "title": "Beiwagen"
+    },
+    {
+      "value": 97,
+      "title": "Elektrolokomotive (Vmax &lt; 100km/h)"
+    },
+    {
+      "value": 98,
+      "title": "Diesellokomotive (Vmax &lt; 100km/h)"
+    },
+    {
+      "value": 99,
+      "title": "Bahndienst-Fahrzeug"
+    }
+  ]
+}

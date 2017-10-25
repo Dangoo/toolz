@@ -26,12 +26,10 @@ textarea {
 }
 
 html {
-    overflow: auto;
     min-height: 100%
 }
 
 body {
-    overflow: auto;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -214,6 +212,7 @@ input[type=text] {
 }
 
 .button {
+    display: block;
     width: 100%;
     min-height: 2em;
     margin-top: 20px;
@@ -332,4 +331,10 @@ ul.checklist {
     text-align: center;
     font-size: 1.7em;
     line-height: 1em;
+}
+
+#compute {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0.5em;
 }

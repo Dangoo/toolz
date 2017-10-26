@@ -207,6 +207,8 @@ function main() {
 		var undelinedNode = document.createElement('u');
 
 		nodes.edvNumberInputNode.textContent = EdvNumber;
+
+		nodes.uicNumberInputNode.innerHTML = '';
 		nodes.uicNumberInputNode.append([uicNumberParts[0], uicNumberParts[1], uicNumberParts[2]].join(' ') + ' ');
 		undelinedNode.textContent = uicNumberParts[3];
 		nodes.uicNumberInputNode.append(undelinedNode);

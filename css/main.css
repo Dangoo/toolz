@@ -176,10 +176,11 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 -.5em 2em;
 }
 
 .fieldcontainer {
-    width: calc(50% - .5em);
+    margin: 0 .5em;
 }
 
 .fieldcontainer label {
@@ -188,7 +189,8 @@ h1 {
     overflow: hidden;
 }
 
-input, 
+input,
+.select,
 .radio + .radio_radio {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.5);
@@ -201,6 +203,7 @@ input,
 }
 
 input:focus, 
+.select:focus,
 .radio:focus + .radio_radio {
     border-color: currentColor;
 }
@@ -215,6 +218,22 @@ input[type=text] {
     text-align: center;
     -webkit-font-smoothing: antialiased;
     font-size: 2em;
+}
+
+.select {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 2em;
+    border-radius: 3px;
+    outline: none;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    font-size: inherit;
+}
+
+.select:disabled {
+    background: transparent;
 }
 
 .button {
@@ -252,7 +271,7 @@ input[type=text] {
 /* RADIO */
 
 ul.checklist {
-    padding: 1em 0 0 0;
+    padding: 0;
     clear: both;
 }
 

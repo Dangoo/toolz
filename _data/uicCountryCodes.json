@@ -1,0 +1,422 @@
+[
+    {
+      "short": "FIN",
+      "code": "10",
+      "name_EN": "Finland",
+      "name_DE": "Finnland"
+    },
+    {
+      "short": "RUS",
+      "code": "20",
+      "name_EN": "Russian Federation",
+      "name_DE": "Russische Föderation"
+    },
+    {
+      "short": "BLR",
+      "code": "21",
+      "name_EN": "Belarus",
+      "name_DE": "Weißrussland"
+    },
+    {
+      "short": "UA",
+      "code": "22",
+      "name_EN": "Ukraine",
+      "name_DE": "Ukraine"
+    },
+    {
+      "short": "MD",
+      "code": "23",
+      "name_EN": "Moldova, Republic of",
+      "name_DE": "Moldawien, Republik"
+    },
+    {
+      "short": "LT",
+      "code": "24",
+      "name_EN": "Lithuania",
+      "name_DE": "Litauen"
+    },
+    {
+      "short": "LV",
+      "code": "25",
+      "name_EN": "Latvia",
+      "name_DE": "Lettland"
+    },
+    {
+      "short": "EST",
+      "code": "26",
+      "name_EN": "Estonia",
+      "name_DE": "Estland"
+    },
+    {
+      "short": "KZ",
+      "code": "27",
+      "name_EN": "Kazakhstan",
+      "name_DE": "Kasachstan"
+    },
+    {
+      "short": "GE",
+      "code": "28",
+      "name_EN": "Georgia",
+      "name_DE": "Georgien"
+    },
+    {
+      "short": "UZ",
+      "code": "29",
+      "name_EN": "Uzbekistan",
+      "name_DE": "Usbekistan"
+    },
+    {
+      "short": "PRK",
+      "code": "30",
+      "name_EN": "Korea, Democratic People's Republic of",
+      "name_DE": "Koreas Demokratische Volksrepublik"
+    },
+    {
+      "short": "MGL",
+      "code": "31",
+      "name_EN": "Mongolia",
+      "name_DE": "Mongolei"
+    },
+    {
+      "short": "VN",
+      "code": "32",
+      "name_EN": "Viet nam",
+      "name_DE": "Vietnam"
+    },
+    {
+      "short": "RC",
+      "code": "33",
+      "name_EN": "China",
+      "name_DE": "China"
+    },
+    {
+      "short": "C",
+      "code": "40",
+      "name_EN": "Cuba",
+      "name_DE": "Kuba"
+    },
+    {
+      "short": "AL",
+      "code": "41",
+      "name_EN": "Albania",
+      "name_DE": "Albanien"
+    },
+    {
+      "short": "J",
+      "code": "42",
+      "name_EN": "Japan",
+      "name_DE": "Japan"
+    },
+    {
+      "short": "BIH",
+      "code": "44",
+      "name_EN": "Bosnia and Herzegovina, Serb Republic of ",
+      "name_DE": "Bosnien und Herzegowinas, serbische Republik"
+    },
+    {
+      "short": "BIH",
+      "code": "49",
+      "name_EN": "Bosnia and Herzegovina",
+      "name_DE": "Bosnien und Herzegowina"
+    },
+    {
+      "short": "BIH",
+      "code": "50",
+      "name_EN": "Bosnia and Herzegovina, Muslim-Croat Federation of ",
+      "name_DE": "Bosnien und Herzegowinas, kroatisch-moslemische Föderation"
+    },
+    {
+      "short": "PL",
+      "code": "51",
+      "name_EN": "Poland",
+      "name_DE": "Polen"
+    },
+    {
+      "short": "BG",
+      "code": "52",
+      "name_EN": "Bulgaria",
+      "name_DE": "Bulgarien"
+    },
+    {
+      "short": "RO",
+      "code": "53",
+      "name_EN": "Romania",
+      "name_DE": "Rumänien"
+    },
+    {
+      "short": "CZ",
+      "code": "54",
+      "name_EN": "Czech Republic",
+      "name_DE": "Tschechische Republik"
+    },
+    {
+      "short": "H",
+      "code": "55",
+      "name_EN": "Hungary",
+      "name_DE": "Ungarn"
+    },
+    {
+      "short": "SK",
+      "code": "56",
+      "name_EN": "Slovakia",
+      "name_DE": "Slowakei"
+    },
+    {
+      "short": "AZE",
+      "code": "57",
+      "name_EN": "Azerbaijan",
+      "name_DE": "Aserbaidschan"
+    },
+    {
+      "short": "ARM",
+      "code": "58",
+      "name_EN": "Armenia",
+      "name_DE": "Armenien"
+    },
+    {
+      "short": "KS",
+      "code": "59",
+      "name_EN": "Kyrgyzstan",
+      "name_DE": "Kirgisistan"
+    },
+    {
+      "short": "IRL",
+      "code": "60",
+      "name_EN": "Ireland",
+      "name_DE": "Irland"
+    },
+    {
+      "short": "ROK",
+      "code": "61",
+      "name_EN": "Korea, Republic of",
+      "name_DE": "Koreanische Republik"
+    },
+    {
+      "short": "CG (MNE)",
+      "code": "62",
+      "name_EN": "Montenegro",
+      "name_DE": "Montenegro"
+    },
+    {
+      "short": "MK",
+      "code": "65",
+      "name_EN": "Macedonia, The former Yugoslav Republic of",
+      "name_DE": "Mazedonien, Ehemalige jugoslawische Republik"
+    },
+    {
+      "short": "TJ",
+      "code": "66",
+      "name_EN": "Tajikistan",
+      "name_DE": "Tadschikistan"
+    },
+    {
+      "short": "TM",
+      "code": "67",
+      "name_EN": "Turkmenistan",
+      "name_DE": "Turkmenistan"
+    },
+    {
+      "short": "AF",
+      "code": "68",
+      "name_EN": " Afghanistan",
+      "name_DE": " Afghanistan"
+    },
+    {
+      "short": "GB",
+      "code": "70",
+      "name_EN": "United Kingdom of Great Britain and Northern Ireland",
+      "name_DE": "Vereinigtes Königreich von Großbritannien und von Nordirland"
+    },
+    {
+      "short": "ES",
+      "code": "71",
+      "name_EN": "Spain",
+      "name_DE": "Spanien"
+    },
+    {
+      "short": "SRB",
+      "code": "72",
+      "name_EN": "Serbia",
+      "name_DE": "Serbien"
+    },
+    {
+      "short": "GR",
+      "code": "73",
+      "name_EN": "Greece",
+      "name_DE": "Griechenland"
+    },
+    {
+      "short": "S",
+      "code": "74",
+      "name_EN": "Sweden",
+      "name_DE": "Schweden"
+    },
+    {
+      "short": "TR",
+      "code": "75",
+      "name_EN": "Turkey",
+      "name_DE": "Türkei"
+    },
+    {
+      "short": "N",
+      "code": "76",
+      "name_EN": "Norway",
+      "name_DE": "Norwegen"
+    },
+    {
+      "short": "HR",
+      "code": "78",
+      "name_EN": "Croatia",
+      "name_DE": "Kroatien"
+    },
+    {
+      "short": "SLO",
+      "code": "79",
+      "name_EN": "Slovenia",
+      "name_DE": "Slowenien"
+    },
+    {
+      "short": "D",
+      "code": "80",
+      "name_EN": "Germany",
+      "name_DE": "Deutschland"
+    },
+    {
+      "short": "A",
+      "code": "81",
+      "name_EN": "Austria",
+      "name_DE": "Österreich"
+    },
+    {
+      "short": "L",
+      "code": "82",
+      "name_EN": "Luxemburg",
+      "name_DE": "Luxemburg"
+    },
+    {
+      "short": "I",
+      "code": "83",
+      "name_EN": "Italy",
+      "name_DE": "Italien"
+    },
+    {
+      "short": "NL",
+      "code": "84",
+      "name_EN": "Netherlands",
+      "name_DE": "Niederlande"
+    },
+    {
+      "short": "CH",
+      "code": "85",
+      "name_EN": "Switzerland",
+      "name_DE": "Schweiz"
+    },
+    {
+      "short": "DK",
+      "code": "86",
+      "name_EN": "Denmark",
+      "name_DE": "Dänemark"
+    },
+    {
+      "short": "F",
+      "code": "87",
+      "name_EN": "France",
+      "name_DE": "Frankreich"
+    },
+    {
+      "short": "B",
+      "code": "88",
+      "name_EN": "Belgium",
+      "name_DE": "Belgien"
+    },
+    {
+      "short": "ET",
+      "code": "90",
+      "name_EN": "Egypt",
+      "name_DE": "Ägypten"
+    },
+    {
+      "short": "TN",
+      "code": "91",
+      "name_EN": "Tunisia",
+      "name_DE": "Tunesien"
+    },
+    {
+      "short": "DZ",
+      "code": "92",
+      "name_EN": "Algeria",
+      "name_DE": "Algerien"
+    },
+    {
+      "short": "MA",
+      "code": "93",
+      "name_EN": "Morocco",
+      "name_DE": "Marokko"
+    },
+    {
+      "short": "P",
+      "code": "94",
+      "name_EN": "Portugal",
+      "name_DE": "Portugal"
+    },
+    {
+      "short": "IL",
+      "code": "95",
+      "name_EN": "Israel",
+      "name_DE": "Israel"
+    },
+    {
+      "short": "IR",
+      "code": "96",
+      "name_EN": "Iran, Islamic Republic of",
+      "name_DE": "Iran, Islamische Republik"
+    },
+    {
+      "short": "SYR",
+      "code": "97",
+      "name_EN": "Syrian Arab Republic",
+      "name_DE": "Syrien, Arabische Republik"
+    },
+    {
+      "short": "RL",
+      "code": "98",
+      "name_EN": "Lebanon",
+      "name_DE": "Libanon"
+    },
+    {
+      "short": "IRQ",
+      "code": "99",
+      "name_EN": "Iraq",
+      "name_DE": "Irak"
+    },
+    {
+      "short": "AU",
+      "code": "",
+      "name_EN": "Australia",
+      "name_DE": "Australien"
+    },
+    {
+      "short": "CA",
+      "code": "",
+      "name_EN": "Canada",
+      "name_DE": "Kanada"
+    },
+    {
+      "short": "CD",
+      "code": "",
+      "name_EN": "Congo, the Democratic Republic of the",
+      "name_DE": "Kongo, Demokratische Republik"
+    },
+    {
+      "short": "ZA",
+      "code": "",
+      "name_EN": "South Africa",
+      "name_DE": "Südafrika"
+    },
+    {
+      "short": "US",
+      "code": "",
+      "name_EN": "United States",
+      "name_DE": "Vereinigte Staaten"
+    }
+   ]

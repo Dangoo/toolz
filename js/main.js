@@ -44,11 +44,12 @@ function main() {
 	var nodes;
 
 	/* App Logic */
-	function engine(typeCode, locoClass, indentureNumber, countryCode, owner) {
+	function engine(typeCode, locoClass, indentureNumber, country, owner) {
 		this.typeCode = typeCode;
 		this.locoClass = locoClass;
 		this.indentureNumber = indentureNumber;
-		this.countryCode = countryCode;
+		this.countryCode = country[0];
+		this.countryShort = country[1]
 		this.owner = owner;
 
 		this.clearingNumber = TYPE_CODES[typeCode];
@@ -63,7 +64,20 @@ function main() {
 		};
 
 		this.computeUicNumber = function () {
-			return this.typeCode + ' ' + this.countryCode + ' ' + this.clearingNumber + this.computeEdvNumber() + ' ' + this.owner;
+			var parts = [
+				this.typeCode,
+				this.countryCode,
+				this.clearingNumber + this.computeEdvNumber(),
+				this.countryShort,
+				this.owner
+			];
+			var spacedString = parts.join(' ');
+			var pos = spacedString.lastIndexOf(' ');
+
+			return {
+				parts: parts,
+				string: spacedString.substring(0, pos) + '-' + spacedString.substring(pos + 1)
+			};
 		};
 	}
 
@@ -159,6 +173,7 @@ function main() {
 
 	function getDomNodes(doc) {
 		return {
+			countryNode: doc.getElementById('loco_country'),
 			numberFormNode: doc.getElementById('number_form'),
 			locoClassInputNode: doc.getElementById('loco_class'),
 			indentureNumberInputNode: doc.getElementById('indenture_number'),
@@ -174,6 +189,7 @@ function main() {
 	function compute(e) {
 		e.preventDefault();
 
+		var locoCountry = nodes.countryNode.value.split(',');
 		var locoClass = parseLocoClass(nodes.locoClassInputNode.value);
 		var indentureNumber = nodes.indentureNumberInputNode.value;
 		var typeCode = parseInt(
@@ -182,15 +198,19 @@ function main() {
 			).value
 		);
 
-		var current = new engine(typeCode, normalizeLocoClass(locoClass), indentureNumber, '80', 'D-DB');
-
+		var current = new engine(typeCode, normalizeLocoClass(locoClass), indentureNumber, locoCountry, 'DB');
+		
 		// generieren der EDV-Loknummer
 		var EdvNumber = current.computeEdvNumber();
 		// generieren der UIC-Loknummer
-		var UicNumber = current.computeUicNumber();
+		var uicNumberParts = current.computeUicNumber().parts;
+		var undelinedNode = document.createElement('u');
 
 		nodes.edvNumberInputNode.textContent = EdvNumber;
-		nodes.uicNumberInputNode.textContent = UicNumber;
+		nodes.uicNumberInputNode.append([uicNumberParts[0], uicNumberParts[1], uicNumberParts[2]].join(' ') + ' ');
+		undelinedNode.textContent = uicNumberParts[3];
+		nodes.uicNumberInputNode.append(undelinedNode);
+		nodes.uicNumberInputNode.append('-' + uicNumberParts[4]);
 
 		nextPage();
 	}

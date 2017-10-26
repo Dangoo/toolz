@@ -8,6 +8,24 @@ title: Toolz – HOME
     <div id="page1">
         <form name="formular" id="number_form" autocomplete="off">
             <div class="fieldrow">
+                <div class="fieldcontainer">
+                    <label for="{{inputID}}">Land</label>
+                    <select class="select" id="loco_country" disabled>
+                        {% assign sorted_uicCountryCodes = site.data.uicCountryCodes | sort: 'name_DE' %}
+                        {% for country in sorted_uicCountryCodes %}
+                        <option
+                            value="{{country.code}},{{country.short}}"
+                            {%if country.short == 'D' %}
+                                selected
+                            {%endif%}
+                        >
+                            {{country.name_DE}}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="fieldrow">
                 {% include inputWithLabel.html
                     id='loco_class'
                     title='Baureihe'

@@ -1,3 +1,61 @@
+/* Luhn algorithm */
+var luhn = {
+	/* Calculates the Luhn checksum */
+	calculate: function (digits) {
+		var sum = this.sum(digits, false);
+		return (sum * 9) % 10;
+	},
+
+	/* Verifies if a number is a valid Luhn checksum */
+	verify: function (digits) {
+		var sum = this.sum(digits, true);
+		return sum > 0 && sum % 10 === 0;
+	},
+
+	/* Sum each digit from right to left, and double
+		 every second digit. If the double exceeds 9,
+		 then sum its digits (i.e., 654321 -> 358341
+		 -> 24) */
+	sum: function (digits, even) {
+		var sum = 0,
+			digit = 0,
+			i = digits.length;
+
+		while (i--) {
+			digit = Number(digits[i]);
+			sum += (even = !even) ? this.computed[digit] : digit;
+		}
+
+		return sum;
+	},
+
+	/* Create a precomputed list based on doubling
+		 each digit, as described in sum(). */
+	computed: [0, 2, 4, 6, 8, 1, 3, 5, 7, 9]
+};
+
+var luhnTools = {
+	/* Appends a Luhn checksum to the end of a number */
+	createLuhnId: function (digits) {
+		return digits + luhn.calculate(digits);
+	},
+
+	/* Checks if a credit card or IMEI number is valid */
+	isLuhnId: function (digits) {
+		return luhn.verify(digits);
+	}
+};
+
+function formDataToObject(data) {
+	var obj = {};
+
+	data.forEach(function(value, key) {
+		obj[key] = value;
+	});
+
+	return obj;
+}
+
 function main() {
 	/* Datenobjekt */
 	var TYPE_CODES = {
@@ -81,54 +139,6 @@ function main() {
 		};
 	}
 
-	/* Luhn algorithm */
-	var luhn = {
-		/* Calculates the Luhn checksum */
-		calculate: function (digits) {
-			var sum = this.sum(digits, false);
-			return (sum * 9) % 10;
-		},
-
-		/* Verifies if a number is a valid Luhn checksum */
-		verify: function (digits) {
-			var sum = this.sum(digits, true);
-			return sum > 0 && sum % 10 === 0;
-		},
-
-		/* Sum each digit from right to left, and double
-			 every second digit. If the double exceeds 9,
-			 then sum its digits (i.e., 654321 -> 358341
-			 -> 24) */
-		sum: function (digits, even) {
-			var sum = 0,
-				digit = 0,
-				i = digits.length;
-
-			while (i--) {
-				digit = Number(digits[i]);
-				sum += (even = !even) ? this.computed[digit] : digit;
-			}
-
-			return sum;
-		},
-
-		/* Create a precomputed list based on doubling
-			 each digit, as described in sum(). */
-		computed: [0, 2, 4, 6, 8, 1, 3, 5, 7, 9]
-	};
-
-	var luhnTools = {
-		/* Appends a Luhn checksum to the end of a number */
-		createLuhnId: function (digits) {
-			return digits + luhn.calculate(digits);
-		},
-
-		/* Checks if a credit card or IMEI number is valid */
-		isLuhnId: function (digits) {
-			return luhn.verify(digits);
-		}
-	};
-
 	function validateClassKey(key) {
 		var isInvalid = typeof key !== 'undefined' && TYPE_LETTERS.indexOf(key) === -1;
 
@@ -136,7 +146,7 @@ function main() {
 			throw ERRORS.TYPE_LETTER_INVALID;
 			return false;
 		}
-		
+
 		return true;
 	}
 
@@ -173,15 +183,14 @@ function main() {
 
 	function getDomNodes(doc) {
 		return {
-			countryNode: doc.getElementById('loco_country'),
 			numberFormNode: doc.getElementById('number_form'),
-			locoClassInputNode: doc.getElementById('loco_class'),
-			indentureNumberInputNode: doc.getElementById('indenture_number'),
+			locoCountryNode: doc.querySelector('[name="loco_country"]'),
+			locoOwnerNode: doc.querySelector('[name="loco_owner"]'),
+			locoClassInputNode: doc.querySelector('[name="loco_class"]'),
 			edvNumberInputNode: doc.getElementById('edv_number'),
 			uicNumberInputNode: doc.getElementById('uic_number'),
 			page1Node: doc.getElementById('page1'),
 			page2Node: doc.getElementById('page2'),
-			computeButtonNode: doc.getElementById('compute'),
 			backButtonNode: doc.getElementById('back_button')
 		}
 	}
@@ -189,17 +198,22 @@ function main() {
 	function compute(e) {
 		e.preventDefault();
 
-		var locoCountry = nodes.countryNode.value.split(',');
-		var locoClass = parseLocoClass(nodes.locoClassInputNode.value);
-		var indentureNumber = nodes.indentureNumberInputNode.value;
-		var typeCode = parseInt(
-			document.querySelector(
-				'input[name="bauartcodes"][type="radio"]:checked'
-			).value
+		var formData = formDataToObject(new FormData(nodes.numberFormNode));
+		// Add due to disabled leads to not submitting data
+		formData.loco_country = nodes.locoCountryNode.value;
+		formData.loco_owner = nodes.locoOwnerNode.value;
+
+		var locoCountry = formData['loco_country'].split(',');
+		var locoClass = parseLocoClass(formData['loco_class']);
+
+		var current = new engine(
+			formData['loco_class-code'],
+			normalizeLocoClass(locoClass),
+			formData['loco_indenture-number'],
+			locoCountry,
+			formData['loco_owner']
 		);
 
-		var current = new engine(typeCode, normalizeLocoClass(locoClass), indentureNumber, locoCountry, 'DB');
-		
 		// generieren der EDV-Loknummer
 		var EdvNumber = current.computeEdvNumber();
 		// generieren der UIC-Loknummer
@@ -229,7 +243,7 @@ function main() {
 
 	function init() {
 		nodes = getDomNodes(document);
-		
+
 		nodes.locoClassInputNode.setAttribute('pattern', CLASS_NUMBER_PATTERN);
 		nodes.locoClassInputNode.setAttribute('title', CLASS_NUMBER_PATTERN_DESCIPTION_DE);
 

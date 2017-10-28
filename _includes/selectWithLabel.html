@@ -1,0 +1,31 @@
+{% comment %}Calculating uniquie ID for input.{% endcomment %}
+{% capture generatedID %}input_{% increment inputCounter %}{% endcapture %}
+
+{% capture inputID %}{{include.id | default: generatedID}}{% endcapture %}
+
+{% capture type %}{{include.type | default: 'text'}}{% endcapture %}
+
+{% capture content %}
+    <select
+        id="{{inputID}}"
+        name="{{include.name}}"
+        class="select {{include.className}}"
+        {%if include.disabled %}
+            disabled
+        {%endif%}
+        required
+    >
+        {% for item in include.list %}
+            <option
+                value="{{item.value}}"
+                {%if item.value == include.selectedValue %}
+                    selected
+                {%endif%}
+            >
+                {{item.label}}
+            </option>
+        {% endfor %}
+    </select>
+{% endcapture %}
+
+{% include label.html id=inputID label=include.label content=content %}

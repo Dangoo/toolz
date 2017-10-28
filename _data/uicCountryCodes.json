@@ -1,422 +1,457 @@
 [
     {
-      "short": "FIN",
-      "code": "10",
-      "name_EN": "Finland",
-      "name_DE": "Finnland"
+        "short": "FIN",
+        "code": "10",
+        "name_EN": "Finland",
+        "label": "Finnland",
+        "value": "10, FIN"
     },
     {
-      "short": "RUS",
-      "code": "20",
-      "name_EN": "Russian Federation",
-      "name_DE": "Russische Föderation"
+        "short": "RUS",
+        "code": "20",
+        "name_EN": "Russian Federation",
+        "label": "Russische Föderation",
+        "value": "20, RUS"
     },
     {
-      "short": "BLR",
-      "code": "21",
-      "name_EN": "Belarus",
-      "name_DE": "Weißrussland"
+        "short": "BLR",
+        "code": "21",
+        "name_EN": "Belarus",
+        "label": "Weißrussland",
+        "value": "21, BLR"
     },
     {
-      "short": "UA",
-      "code": "22",
-      "name_EN": "Ukraine",
-      "name_DE": "Ukraine"
+        "short": "UA",
+        "code": "22",
+        "name_EN": "Ukraine",
+        "label": "Ukraine",
+        "value": "22, UA"
     },
     {
-      "short": "MD",
-      "code": "23",
-      "name_EN": "Moldova, Republic of",
-      "name_DE": "Moldawien, Republik"
+        "short": "MD",
+        "code": "23",
+        "name_EN": "Moldova, Republic of",
+        "label": "Moldawien, Republik",
+        "value": "23, MD"
     },
     {
-      "short": "LT",
-      "code": "24",
-      "name_EN": "Lithuania",
-      "name_DE": "Litauen"
+        "short": "LT",
+        "code": "24",
+        "name_EN": "Lithuania",
+        "label": "Litauen",
+        "value": "24, LT"
     },
     {
-      "short": "LV",
-      "code": "25",
-      "name_EN": "Latvia",
-      "name_DE": "Lettland"
+        "short": "LV",
+        "code": "25",
+        "name_EN": "Latvia",
+        "label": "Lettland",
+        "value": "25, LV"
     },
     {
-      "short": "EST",
-      "code": "26",
-      "name_EN": "Estonia",
-      "name_DE": "Estland"
+        "short": "EST",
+        "code": "26",
+        "name_EN": "Estonia",
+        "label": "Estland",
+        "value": "26, EST"
     },
     {
-      "short": "KZ",
-      "code": "27",
-      "name_EN": "Kazakhstan",
-      "name_DE": "Kasachstan"
+        "short": "KZ",
+        "code": "27",
+        "name_EN": "Kazakhstan",
+        "label": "Kasachstan",
+        "value": "27, KZ"
     },
     {
-      "short": "GE",
-      "code": "28",
-      "name_EN": "Georgia",
-      "name_DE": "Georgien"
+        "short": "GE",
+        "code": "28",
+        "name_EN": "Georgia",
+        "label": "Georgien",
+        "value": "28, GE"
     },
     {
-      "short": "UZ",
-      "code": "29",
-      "name_EN": "Uzbekistan",
-      "name_DE": "Usbekistan"
+        "short": "UZ",
+        "code": "29",
+        "name_EN": "Uzbekistan",
+        "label": "Usbekistan",
+        "value": "29, UZ"
     },
     {
-      "short": "PRK",
-      "code": "30",
-      "name_EN": "Korea, Democratic People's Republic of",
-      "name_DE": "Koreas Demokratische Volksrepublik"
+        "short": "PRK",
+        "code": "30",
+        "name_EN": "Korea, Democratic People's Republic of",
+        "label": "Koreas Demokratische Volksrepublik",
+        "value": "30, PRK"
     },
     {
-      "short": "MGL",
-      "code": "31",
-      "name_EN": "Mongolia",
-      "name_DE": "Mongolei"
+        "short": "MGL",
+        "code": "31",
+        "name_EN": "Mongolia",
+        "label": "Mongolei",
+        "value": "31, MGL"
     },
     {
-      "short": "VN",
-      "code": "32",
-      "name_EN": "Viet nam",
-      "name_DE": "Vietnam"
+        "short": "VN",
+        "code": "32",
+        "name_EN": "Viet nam",
+        "label": "Vietnam",
+        "value": "32, VN"
     },
     {
-      "short": "RC",
-      "code": "33",
-      "name_EN": "China",
-      "name_DE": "China"
+        "short": "RC",
+        "code": "33",
+        "name_EN": "China",
+        "label": "China",
+        "value": "33, RC"
     },
     {
-      "short": "C",
-      "code": "40",
-      "name_EN": "Cuba",
-      "name_DE": "Kuba"
+        "short": "C",
+        "code": "40",
+        "name_EN": "Cuba",
+        "label": "Kuba",
+        "value": "40, C"
     },
     {
-      "short": "AL",
-      "code": "41",
-      "name_EN": "Albania",
-      "name_DE": "Albanien"
+        "short": "AL",
+        "code": "41",
+        "name_EN": "Albania",
+        "label": "Albanien",
+        "value": "41, AL"
     },
     {
-      "short": "J",
-      "code": "42",
-      "name_EN": "Japan",
-      "name_DE": "Japan"
+        "short": "J",
+        "code": "42",
+        "name_EN": "Japan",
+        "label": "Japan",
+        "value": "42, J"
     },
     {
-      "short": "BIH",
-      "code": "44",
-      "name_EN": "Bosnia and Herzegovina, Serb Republic of ",
-      "name_DE": "Bosnien und Herzegowinas, serbische Republik"
+        "short": "BIH",
+        "code": "44",
+        "name_EN": "Bosnia and Herzegovina, Serb Republic of ",
+        "label": "Bosnien und Herzegowinas, serbische Republik",
+        "value": "44, BIH"
     },
     {
-      "short": "BIH",
-      "code": "49",
-      "name_EN": "Bosnia and Herzegovina",
-      "name_DE": "Bosnien und Herzegowina"
+        "short": "BIH",
+        "code": "49",
+        "name_EN": "Bosnia and Herzegovina",
+        "label": "Bosnien und Herzegowina",
+        "value": "49, BIH"
     },
     {
-      "short": "BIH",
-      "code": "50",
-      "name_EN": "Bosnia and Herzegovina, Muslim-Croat Federation of ",
-      "name_DE": "Bosnien und Herzegowinas, kroatisch-moslemische Föderation"
+        "short": "BIH",
+        "code": "50",
+        "name_EN": "Bosnia and Herzegovina, Muslim-Croat Federation of ",
+        "label": "Bosnien und Herzegowinas, kroatisch-moslemische Föderation",
+        "value": "50, BIH"
     },
     {
-      "short": "PL",
-      "code": "51",
-      "name_EN": "Poland",
-      "name_DE": "Polen"
+        "short": "PL",
+        "code": "51",
+        "name_EN": "Poland",
+        "label": "Polen",
+        "value": "51, PL"
     },
     {
-      "short": "BG",
-      "code": "52",
-      "name_EN": "Bulgaria",
-      "name_DE": "Bulgarien"
+        "short": "BG",
+        "code": "52",
+        "name_EN": "Bulgaria",
+        "label": "Bulgarien",
+        "value": "52, BG"
     },
     {
-      "short": "RO",
-      "code": "53",
-      "name_EN": "Romania",
-      "name_DE": "Rumänien"
+        "short": "RO",
+        "code": "53",
+        "name_EN": "Romania",
+        "label": "Rumänien",
+        "value": "53, RO"
     },
     {
-      "short": "CZ",
-      "code": "54",
-      "name_EN": "Czech Republic",
-      "name_DE": "Tschechische Republik"
+        "short": "CZ",
+        "code": "54",
+        "name_EN": "Czech Republic",
+        "label": "Tschechische Republik",
+        "value": "54, CZ"
     },
     {
-      "short": "H",
-      "code": "55",
-      "name_EN": "Hungary",
-      "name_DE": "Ungarn"
+        "short": "H",
+        "code": "55",
+        "name_EN": "Hungary",
+        "label": "Ungarn",
+        "value": "55, H"
     },
     {
-      "short": "SK",
-      "code": "56",
-      "name_EN": "Slovakia",
-      "name_DE": "Slowakei"
+        "short": "SK",
+        "code": "56",
+        "name_EN": "Slovakia",
+        "label": "Slowakei",
+        "value": "56, SK"
     },
     {
-      "short": "AZE",
-      "code": "57",
-      "name_EN": "Azerbaijan",
-      "name_DE": "Aserbaidschan"
+        "short": "AZE",
+        "code": "57",
+        "name_EN": "Azerbaijan",
+        "label": "Aserbaidschan",
+        "value": "57, AZE"
     },
     {
-      "short": "ARM",
-      "code": "58",
-      "name_EN": "Armenia",
-      "name_DE": "Armenien"
+        "short": "ARM",
+        "code": "58",
+        "name_EN": "Armenia",
+        "label": "Armenien",
+        "value": "58, ARM"
     },
     {
-      "short": "KS",
-      "code": "59",
-      "name_EN": "Kyrgyzstan",
-      "name_DE": "Kirgisistan"
+        "short": "KS",
+        "code": "59",
+        "name_EN": "Kyrgyzstan",
+        "label": "Kirgisistan",
+        "value": "59, KS"
     },
     {
-      "short": "IRL",
-      "code": "60",
-      "name_EN": "Ireland",
-      "name_DE": "Irland"
+        "short": "IRL",
+        "code": "60",
+        "name_EN": "Ireland",
+        "label": "Irland",
+        "value": "60, IRL"
     },
     {
-      "short": "ROK",
-      "code": "61",
-      "name_EN": "Korea, Republic of",
-      "name_DE": "Koreanische Republik"
+        "short": "ROK",
+        "code": "61",
+        "name_EN": "Korea, Republic of",
+        "label": "Koreanische Republik",
+        "value": "61, ROK"
     },
     {
-      "short": "CG (MNE)",
-      "code": "62",
-      "name_EN": "Montenegro",
-      "name_DE": "Montenegro"
+        "short": "CG (MNE)",
+        "code": "62",
+        "name_EN": "Montenegro",
+        "label": "Montenegro",
+        "value": "62, CG (MNE)"
     },
     {
-      "short": "MK",
-      "code": "65",
-      "name_EN": "Macedonia, The former Yugoslav Republic of",
-      "name_DE": "Mazedonien, Ehemalige jugoslawische Republik"
+        "short": "MK",
+        "code": "65",
+        "name_EN": "Macedonia, The former Yugoslav Republic of",
+        "label": "Mazedonien, Ehemalige jugoslawische Republik",
+        "value": "65, MK"
     },
     {
-      "short": "TJ",
-      "code": "66",
-      "name_EN": "Tajikistan",
-      "name_DE": "Tadschikistan"
+        "short": "TJ",
+        "code": "66",
+        "name_EN": "Tajikistan",
+        "label": "Tadschikistan",
+        "value": "66, TJ"
     },
     {
-      "short": "TM",
-      "code": "67",
-      "name_EN": "Turkmenistan",
-      "name_DE": "Turkmenistan"
+        "short": "TM",
+        "code": "67",
+        "name_EN": "Turkmenistan",
+        "label": "Turkmenistan",
+        "value": "67, TM"
     },
     {
-      "short": "AF",
-      "code": "68",
-      "name_EN": " Afghanistan",
-      "name_DE": " Afghanistan"
+        "short": "AF",
+        "code": "68",
+        "name_EN": " Afghanistan",
+        "label": " Afghanistan",
+        "value": "68, AF"
     },
     {
-      "short": "GB",
-      "code": "70",
-      "name_EN": "United Kingdom of Great Britain and Northern Ireland",
-      "name_DE": "Vereinigtes Königreich von Großbritannien und von Nordirland"
+        "short": "GB",
+        "code": "70",
+        "name_EN": "United Kingdom of Great Britain and Northern Ireland",
+        "label": "Vereinigtes Königreich von Großbritannien und von Nordirland",
+        "value": "70, GB"
     },
     {
-      "short": "ES",
-      "code": "71",
-      "name_EN": "Spain",
-      "name_DE": "Spanien"
+        "short": "ES",
+        "code": "71",
+        "name_EN": "Spain",
+        "label": "Spanien",
+        "value": "71, ES"
     },
     {
-      "short": "SRB",
-      "code": "72",
-      "name_EN": "Serbia",
-      "name_DE": "Serbien"
+        "short": "SRB",
+        "code": "72",
+        "name_EN": "Serbia",
+        "label": "Serbien",
+        "value": "72, SRB"
     },
     {
-      "short": "GR",
-      "code": "73",
-      "name_EN": "Greece",
-      "name_DE": "Griechenland"
+        "short": "GR",
+        "code": "73",
+        "name_EN": "Greece",
+        "label": "Griechenland",
+        "value": "73, GR"
     },
     {
-      "short": "S",
-      "code": "74",
-      "name_EN": "Sweden",
-      "name_DE": "Schweden"
+        "short": "S",
+        "code": "74",
+        "name_EN": "Sweden",
+        "label": "Schweden",
+        "value": "74, S"
     },
     {
-      "short": "TR",
-      "code": "75",
-      "name_EN": "Turkey",
-      "name_DE": "Türkei"
+        "short": "TR",
+        "code": "75",
+        "name_EN": "Turkey",
+        "label": "Türkei",
+        "value": "75, TR"
     },
     {
-      "short": "N",
-      "code": "76",
-      "name_EN": "Norway",
-      "name_DE": "Norwegen"
+        "short": "N",
+        "code": "76",
+        "name_EN": "Norway",
+        "label": "Norwegen",
+        "value": "76, N"
     },
     {
-      "short": "HR",
-      "code": "78",
-      "name_EN": "Croatia",
-      "name_DE": "Kroatien"
+        "short": "HR",
+        "code": "78",
+        "name_EN": "Croatia",
+        "label": "Kroatien",
+        "value": "78, HR"
     },
     {
-      "short": "SLO",
-      "code": "79",
-      "name_EN": "Slovenia",
-      "name_DE": "Slowenien"
+        "short": "SLO",
+        "code": "79",
+        "name_EN": "Slovenia",
+        "label": "Slowenien",
+        "value": "79, SLO"
     },
     {
-      "short": "D",
-      "code": "80",
-      "name_EN": "Germany",
-      "name_DE": "Deutschland"
+        "short": "D",
+        "code": "80",
+        "name_EN": "Germany",
+        "label": "Deutschland",
+        "value": "80, D"
     },
     {
-      "short": "A",
-      "code": "81",
-      "name_EN": "Austria",
-      "name_DE": "Österreich"
+        "short": "A",
+        "code": "81",
+        "name_EN": "Austria",
+        "label": "Österreich",
+        "value": "81, A"
     },
     {
-      "short": "L",
-      "code": "82",
-      "name_EN": "Luxemburg",
-      "name_DE": "Luxemburg"
+        "short": "L",
+        "code": "82",
+        "name_EN": "Luxemburg",
+        "label": "Luxemburg",
+        "value": "82, L"
     },
     {
-      "short": "I",
-      "code": "83",
-      "name_EN": "Italy",
-      "name_DE": "Italien"
+        "short": "I",
+        "code": "83",
+        "name_EN": "Italy",
+        "label": "Italien",
+        "value": "83, I"
     },
     {
-      "short": "NL",
-      "code": "84",
-      "name_EN": "Netherlands",
-      "name_DE": "Niederlande"
+        "short": "NL",
+        "code": "84",
+        "name_EN": "Netherlands",
+        "label": "Niederlande",
+        "value": "84, NL"
     },
     {
-      "short": "CH",
-      "code": "85",
-      "name_EN": "Switzerland",
-      "name_DE": "Schweiz"
+        "short": "CH",
+        "code": "85",
+        "name_EN": "Switzerland",
+        "label": "Schweiz",
+        "value": "85, CH"
     },
     {
-      "short": "DK",
-      "code": "86",
-      "name_EN": "Denmark",
-      "name_DE": "Dänemark"
+        "short": "DK",
+        "code": "86",
+        "name_EN": "Denmark",
+        "label": "Dänemark",
+        "value": "86, DK"
     },
     {
-      "short": "F",
-      "code": "87",
-      "name_EN": "France",
-      "name_DE": "Frankreich"
+        "short": "F",
+        "code": "87",
+        "name_EN": "France",
+        "label": "Frankreich",
+        "value": "87, F"
     },
     {
-      "short": "B",
-      "code": "88",
-      "name_EN": "Belgium",
-      "name_DE": "Belgien"
+        "short": "B",
+        "code": "88",
+        "name_EN": "Belgium",
+        "label": "Belgien",
+        "value": "88, B"
     },
     {
-      "short": "ET",
-      "code": "90",
-      "name_EN": "Egypt",
-      "name_DE": "Ägypten"
+        "short": "ET",
+        "code": "90",
+        "name_EN": "Egypt",
+        "label": "Ägypten",
+        "value": "90, ET"
     },
     {
-      "short": "TN",
-      "code": "91",
-      "name_EN": "Tunisia",
-      "name_DE": "Tunesien"
+        "short": "TN",
+        "code": "91",
+        "name_EN": "Tunisia",
+        "label": "Tunesien",
+        "value": "91, TN"
     },
     {
-      "short": "DZ",
-      "code": "92",
-      "name_EN": "Algeria",
-      "name_DE": "Algerien"
+        "short": "DZ",
+        "code": "92",
+        "name_EN": "Algeria",
+        "label": "Algerien",
+        "value": "92, DZ"
     },
     {
-      "short": "MA",
-      "code": "93",
-      "name_EN": "Morocco",
-      "name_DE": "Marokko"
+        "short": "MA",
+        "code": "93",
+        "name_EN": "Morocco",
+        "label": "Marokko",
+        "value": "93, MA"
     },
     {
-      "short": "P",
-      "code": "94",
-      "name_EN": "Portugal",
-      "name_DE": "Portugal"
+        "short": "P",
+        "code": "94",
+        "name_EN": "Portugal",
+        "label": "Portugal",
+        "value": "94, P"
     },
     {
-      "short": "IL",
-      "code": "95",
-      "name_EN": "Israel",
-      "name_DE": "Israel"
+        "short": "IL",
+        "code": "95",
+        "name_EN": "Israel",
+        "label": "Israel",
+        "value": "95, IL"
     },
     {
-      "short": "IR",
-      "code": "96",
-      "name_EN": "Iran, Islamic Republic of",
-      "name_DE": "Iran, Islamische Republik"
+        "short": "IR",
+        "code": "96",
+        "name_EN": "Iran, Islamic Republic of",
+        "label": "Iran, Islamische Republik",
+        "value": "96, IR"
     },
     {
-      "short": "SYR",
-      "code": "97",
-      "name_EN": "Syrian Arab Republic",
-      "name_DE": "Syrien, Arabische Republik"
+        "short": "SYR",
+        "code": "97",
+        "name_EN": "Syrian Arab Republic",
+        "label": "Syrien, Arabische Republik",
+        "value": "97, SYR"
     },
     {
-      "short": "RL",
-      "code": "98",
-      "name_EN": "Lebanon",
-      "name_DE": "Libanon"
+        "short": "RL",
+        "code": "98",
+        "name_EN": "Lebanon",
+        "label": "Libanon",
+        "value": "98, RL"
     },
     {
-      "short": "IRQ",
-      "code": "99",
-      "name_EN": "Iraq",
-      "name_DE": "Irak"
-    },
-    {
-      "short": "AU",
-      "code": "",
-      "name_EN": "Australia",
-      "name_DE": "Australien"
-    },
-    {
-      "short": "CA",
-      "code": "",
-      "name_EN": "Canada",
-      "name_DE": "Kanada"
-    },
-    {
-      "short": "CD",
-      "code": "",
-      "name_EN": "Congo, the Democratic Republic of the",
-      "name_DE": "Kongo, Demokratische Republik"
-    },
-    {
-      "short": "ZA",
-      "code": "",
-      "name_EN": "South Africa",
-      "name_DE": "Südafrika"
-    },
-    {
-      "short": "US",
-      "code": "",
-      "name_EN": "United States",
-      "name_DE": "Vereinigte Staaten"
+        "short": "IRQ",
+        "code": "99",
+        "name_EN": "Iraq",
+        "label": "Irak",
+        "value": "99, IRQ"
     }
-   ]
+]

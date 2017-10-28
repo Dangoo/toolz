@@ -5,7 +5,15 @@
 
 {% capture type %}{{include.type | default: 'text'}}{% endcapture %}
 
-<div class="fieldcontainer">
-    <label for="{{inputID}}">{{include.title}}</label>
-    <input type="{{type}}" id="{{inputID}}" required placeholder="{{include.placeholder}}" minlength="{{include.minlength}}" />
-</div>
+{% capture content %}
+    <input
+        type="{{type}}"
+        id="{{inputID}}"
+        name="{{include.name}}"
+        placeholder="{{include.placeholder}}"
+        minlength="{{include.minlength}}"
+        required 
+    />
+{% endcapture %}
+
+{% include label.html id=inputID label=include.label content=content %}

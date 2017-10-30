@@ -46,14 +46,36 @@ var luhnTools = {
 	}
 };
 
-function formDataToObject(data) {
-	var obj = {};
+// Read all values from elements of a name group inside given form node
+function serializeForm(formNode) {
+	var fields = formNode.elements;
+	var fieldsArray = [].slice.call(fields);
 
-	data.forEach(function(value, key) {
-		obj[key] = value;
-	});
+	var names = fieldsArray
+		// Filter unchecked radios and inputs
+		.filter(function (field) {
+			return !((field.type === 'checkbox' || field.type === 'radio') && !field.checked);
+		})
+		.reduce(function (lst, field) {
+			var name = field.name;
 
-	return obj;
+			if (name.length && lst.indexOf(name) === -1) {
+				lst.push(name);
+			}
+
+			return lst;
+		}, []);
+
+
+	var data = {};
+	for (var i = 0; i < names.length; i++) {
+		var name = names[i];
+		data[name] = fields[name].value;
+	}
+
+	console.log(data);
+
+	return data;
 }
 
 function main() {
@@ -198,20 +220,22 @@ function main() {
 	function compute(e) {
 		e.preventDefault();
 
-		var formData = formDataToObject(new FormData(nodes.numberFormNode));
+		// var formData = new FormData(nodes.numberFormNode);
 		// Add due to disabled leads to not submitting data
-		formData.loco_country = nodes.locoCountryNode.value;
-		formData.loco_owner = nodes.locoOwnerNode.value;
+		// formData.append(nodes.locoCountryNode.name, nodes.locoCountryNode.value);
+		// formData.append(nodes.locoOwnerNode.name, nodes.locoOwnerNode.value);
 
-		var locoCountry = formData['loco_country'].split(',');
-		var locoClass = parseLocoClass(formData['loco_class']);
+		var formDataObj = serializeForm(nodes.numberFormNode);
+
+		var locoCountry = formDataObj['loco_country'].split(',');
+		var locoClass = parseLocoClass(formDataObj['loco_class']);
 
 		var current = new engine(
-			formData['loco_class-code'],
+			formDataObj['loco_class-code'],
 			normalizeLocoClass(locoClass),
-			formData['loco_indenture-number'],
+			formDataObj['loco_indenture-number'],
 			locoCountry,
-			formData['loco_owner']
+			formDataObj['loco_owner']
 		);
 
 		// generieren der EDV-Loknummer

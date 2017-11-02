@@ -2,7 +2,7 @@
 {% capture radioID %}radio_{% increment radioCounter %}{% endcapture %}
 
 <label class="radio-with-label">
-    <input type="radio" class="radio" name="{{include.name}}" id="{{include.radioID}}" value="{{include.value}}" required />
-    <span class="radio_radio"></span>
+    <input type="radio" class="radio_native" name="{{include.name}}" id="{{include.radioID}}" value="{{include.value}}" required />
+    <span class="radio_custom"></span>
     <span class="radio_label">{{include.label}}</span>
 </label>

@@ -6,10 +6,11 @@
 {% capture type %}{{include.type | default: 'text'}}{% endcapture %}
 
 {% capture content %}
+<div class="select {{include.className}}">
     <select
         id="{{inputID}}"
         name="{{include.name}}"
-        class="select {{include.className}}"
+        class="select_native"
         {%if include.disabled %}
             disabled
         {%endif%}
@@ -26,6 +27,7 @@
             </option>
         {% endfor %}
     </select>
+</div>
 {% endcapture %}
 
 {% include label.html id=inputID label=include.label content=content %}

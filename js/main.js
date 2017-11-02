@@ -73,8 +73,6 @@ function serializeForm(formNode) {
 		data[name] = fields[name].value;
 	}
 
-	console.log(data);
-
 	return data;
 }
 
@@ -276,9 +274,57 @@ function main() {
 	}
 
 	init();
+
+	fetch("/data/owners_de.json")
+		.then(function (response) { return response.json(); })
+		.then(function (data) {
+			var sortedDate = data.sort(function (a, b) {
+				return a.label.localeCompare(b.label);
+			});
+
+			nodes.locoOwnerNode.innerHTML = '';
+			renderOptions(sortedDate, nodes.locoOwnerNode, 'DB');
+			nodes.locoOwnerNode.removeAttribute('disabled');
+		});
 }
 
 // Start app
 main();
 
+// DOM functions
+function renderOptions(lst, parentNode, selectedValue) {
+	var lastFirstLetter = undefined;
 
+	var splitted = lst.reduce(function (iterator, item) {
+		var firstLetter = item.label.substr(0, 1).toUpperCase();
+		var selected = item.value === selectedValue;
+
+		Array.isArray(iterator[firstLetter]) ? null : iterator[firstLetter] = [];
+
+		iterator[firstLetter].push(
+			renderOption(item.value, selected, item.label)
+		);
+
+		return iterator;
+	}, {});
+
+	Object.keys(splitted).forEach(function(key) {
+		var optGroup = document.createElement('optgroup');
+		optGroup.setAttribute('label', key);
+
+		splitted[key].forEach(function(option){
+			optGroup.appendChild(option);
+		});
+
+		parentNode.appendChild(optGroup);
+	})
+}
+
+function renderOption(value, selected, text) {
+	var option = document.createElement('option');
+	option.setAttribute('value', value);
+	option.innerText = text;
+	selected && option.setAttribute('selected', true);
+
+	return option;
+}

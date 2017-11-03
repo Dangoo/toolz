@@ -362,6 +362,10 @@ ul.checklist {
     margin-left: .5em;
 }
 
+.radio-with-label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .radio_label,
 .meta-bar a {
     transition: transform .1s ease-in;

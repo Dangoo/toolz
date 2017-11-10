@@ -3,7 +3,14 @@
   "options": [
     {
       "value": 90,
-      "label": "Sonderfahrzeug (z.B. Dampflok)"
+      "label": "Sonderfahrzeug (z.B. Dampflok)",
+      "options": [
+        {
+          "value": "",
+          "label": "Ölhauptfeuerung",
+          "name": "steam-loco-oil"
+        }
+      ]
     },
     {
       "value": 91,

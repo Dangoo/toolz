@@ -42,13 +42,25 @@ title: Toolz – HOME
                 %}
             </div>
             <ul class="checklist">
-                {% for radio in site.data.locoClassCodes.options %}
+                {% for item in site.data.locoClassCodes.options %}
                     <li>
-                        {% include radioWithLabel.html
+                        {% include binaryInputWithLabel.html
+                            type='radio'
                             name=site.data.locoClassCodes.name
-                            value=radio.value
-                            label=radio.label
+                            value=item.value
+                            label=item.label
                         %}
+                        {% if item.options %}
+                            {% for subitem in item.options %}
+                                {% include binaryInputWithLabel.html
+                                    type='checkbox'
+                                    name=subitem.name
+                                    value=subitem.value
+                                    label=subitem.label
+                                    nested=true
+                                %}
+                            {% endfor %}
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>

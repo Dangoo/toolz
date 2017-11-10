@@ -49,6 +49,7 @@ title: Toolz – HOME
                             name=site.data.locoClassCodes.name
                             value=item.value
                             label=item.label
+                            required=true
                         %}
                         {% if item.options %}
                             {% for subitem in item.options %}
@@ -58,6 +59,7 @@ title: Toolz – HOME
                                     value=subitem.value
                                     label=subitem.label
                                     nested=true
+                                    disabled=true
                                 %}
                             {% endfor %}
                         {% endif %}

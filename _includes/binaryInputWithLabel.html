@@ -2,7 +2,15 @@
 {% capture binariInputID %}radio_{% increment radioCounter %}{% endcapture %}
 
 <label class="binary-input-with-label{% if include.nested %} binary-input-with-label--nested{% endif %}">
-    <input type="{{include.type}}" class="binary-input_native" name="{{include.name}}" id="{{include.binariInputID}}" value="{{include.value}}" required />
+    <input
+        type="{{include.type}}"
+        class="binary-input_native"
+        name="{{include.name}}"
+        id="{{include.binariInputID}}"
+        value="{{include.value}}"
+        {% if include.required %}required{% endif %}
+        {% if include.disabled %}disabled{% endif %}
+    />
     <span class="binary-input_custom"></span>
     <span class="binary-input_label">{{include.label}}</span>
 </label>

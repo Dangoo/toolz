@@ -58,6 +58,7 @@ function main() {
       locoCountryNode: doc.querySelector('[name="loco_country"]'),
       locoOwnerNode: doc.querySelector('[name="loco_owner"]'),
       locoClassInputNode: doc.querySelector('[name="loco_class"]'),
+      steamLocoOilInputNode: doc.querySelector('[name="steam-loco-oil"]'),
       edvNumberInputNode: doc.getElementById('edv_number'),
       uicNumberInputNode: doc.getElementById('uic_number'),
       page1Node: doc.getElementById('page1'),
@@ -115,6 +116,14 @@ function main() {
     nextPage();
   }
 
+  function update(e) {
+    const formDataObj = serializeForm(nodes.numberFormNode);
+
+    nodes.steamLocoOilInputNode.disabled = (
+      formDataObj['loco_class-code'] !== '90'
+    );
+  }
+
   function init() {
     nodes = getDomNodes(document);
 
@@ -122,6 +131,7 @@ function main() {
     nodes.locoClassInputNode.setAttribute('title', CLASS_NUMBER_PATTERN_DESCIPTION_DE);
 
     nodes.numberFormNode.addEventListener('submit', compute);
+    nodes.numberFormNode.addEventListener('change', update);
     nodes.backButtonNode.addEventListener('click', prevPage);
   }
 

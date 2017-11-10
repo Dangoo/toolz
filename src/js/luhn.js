@@ -1,3 +1,7 @@
+/**
+ * From https://gist.github.com/thensg/07bd82f73a1f784a35f0
+ */
+
 /* Luhn algorithm */
 export const luhn = {
   /* Calculates the Luhn checksum */
@@ -12,10 +16,12 @@ export const luhn = {
     return sum > 0 && sum % 10 === 0;
   },
 
-  /* Sum each digit from right to left, and double
-		 every second digit. If the double exceeds 9,
-		 then sum its digits (i.e., 654321 -> 358341
-		 -> 24) */
+  /**
+   * Sum each digit from right to left, and double
+   * every second digit. If the double exceeds 9,
+   * then sum its digits (i.e., 654321 -> 358341
+   * -> 24)
+   */
   sum(digits, even) {
     let sum = 0;
     let digit = 0;
@@ -30,7 +36,8 @@ export const luhn = {
   },
 
   /* Create a precomputed list based on doubling
-		 each digit, as described in sum(). */
+   *  each digit, as described in sum().
+   */
   computed: [0, 2, 4, 6, 8, 1, 3, 5, 7, 9],
 };
 

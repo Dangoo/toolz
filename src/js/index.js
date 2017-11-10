@@ -103,14 +103,14 @@ function main() {
     const uicNumberParts = current.computeUicNumber().parts;
 
     const underlinedNode = document.createElement('u');
-    underlinedNode.textContent = uicNumberParts[3];
+    underlinedNode.textContent = uicNumberParts[4];
 
     nodes.edvNumberInputNode.textContent = EdvNumber;
 
     nodes.uicNumberInputNode.innerHTML = '';
-    nodes.uicNumberInputNode.append(`${[uicNumberParts[0], uicNumberParts[1], uicNumberParts[2]].join(' ')} `);
+    nodes.uicNumberInputNode.append(`${[uicNumberParts[0], uicNumberParts[1], uicNumberParts[2], uicNumberParts[3]].join(' ')} `);
     nodes.uicNumberInputNode.append(underlinedNode);
-    nodes.uicNumberInputNode.append(`-${uicNumberParts[4]}`);
+    nodes.uicNumberInputNode.append(`-${uicNumberParts[5]}`);
 
     nextPage();
   }

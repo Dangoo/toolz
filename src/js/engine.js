@@ -8,14 +8,13 @@ export default function (typeCode, locoClass, indentureNumber, country, owner) {
   this.typeCode = typeCode;
   this.locoClass = locoClass;
   this.indentureNumber = indentureNumber;
-  this.countryCode = country[0];
-  this.countryShort = country[1];
   this.owner = owner;
+  [this.countryCode, this.countryShort] = country;
 
   this.clearingNumber = TYPE_CODES[typeCode];
 
   /* Rechenlogik */
-  this.computeEdvNumber = function () {
+  this.computeEdvNumber = () => {
     const locoNumber = this.locoClass + this.indentureNumber;
     const checkDigit = luhn.calculate(locoNumber);
 
@@ -23,11 +22,29 @@ export default function (typeCode, locoClass, indentureNumber, country, owner) {
     return `${zeroPad(this.locoClass, 3)} ${zeroPad(this.indentureNumber, 3)}-${checkDigit}`;
   };
 
-  this.computeUicNumber = function () {
+  this.computeUicNumber = () => {
+    const UIClocoClass = `${this.clearingNumber}${zeroPad(this.locoClass, 3)}`;
+    const UICindentureNumber = zeroPad(this.indentureNumber, 3);
+
+    const UICcheckDigit = luhn.calculate([
+      this.typeCode,
+      this.countryCode,
+      UIClocoClass,
+      UICindentureNumber,
+    ].join(''));
+
+    console.log([
+      this.typeCode,
+      this.countryCode,
+      UIClocoClass,
+      UICindentureNumber,
+    ].join(''));
+
     const parts = [
       this.typeCode,
       this.countryCode,
-      this.clearingNumber + this.computeEdvNumber(),
+      UIClocoClass,
+      `${UICindentureNumber}-${UICcheckDigit}`,
       this.countryShort,
       this.owner,
     ];

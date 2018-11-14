@@ -3,14 +3,16 @@
    ========================================================================== */
 
 @font-face {
-    font-family: 'Din1451 Mittelschrift';
+    font-family: 'Bahn';
     src: url('../fonts/din1451alt-webfont.eot');
     src: url('../fonts/din1451alt-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/din1451alt-webfont.woff') format('woff'),
          url('../fonts/din1451alt-webfont.ttf') format('truetype'),
          url('../fonts/din1451alt-webfont.svg#alte_din_1451_mittelschriftRg') format('svg');
+    src: local('Bahnschrift');
     font-weight: normal;
     font-style: normal;
+    font-variation-settings: "wght" 450, "wdth" 95;
 }
 
 /* ==========================================================================
@@ -69,13 +71,6 @@ textarea {
     resize: vertical;
 }
 
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
 
 /* ==========================================================================
    Interface styles
@@ -110,11 +105,17 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
-    font-family: 'Din1451 Mittelschrift', Arial, sans-serif;
+    font-family: 'Bahn', Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     color: #333;
+}
+
+@supports (font-variation-settings: "wght" 500) {
+    body {
+        font-variation-settings: "wght" 450, "wdth" 95;
+    }
 }
 
 main {

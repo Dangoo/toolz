@@ -1,0 +1,9 @@
+{
+    "name": "Loknummerngenerator",
+    "short_name": "Loknummerngenerator",
+    "theme_color": "#d20b00",
+    "background_color": "#d20b00",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/"
+  }

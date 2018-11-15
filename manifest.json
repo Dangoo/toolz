@@ -5,5 +5,17 @@
     "background_color": "#d20b00",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/"
+    "start_url": "/",
+    "icons": [
+        {
+          "src": "/touch-icon-ipad-retina.png",
+          "type": "image/png",
+          "sizes": "177x177"
+        },
+        {
+          "src": "/touch-icon-ipad.png",
+          "type": "image/png",
+          "sizes": "72x72"
+        }
+      ]
   }

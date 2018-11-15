@@ -54,6 +54,7 @@ hr {
 }
 
 img {
+    display: inline-block;
     vertical-align: middle;
 }
 
@@ -103,15 +104,10 @@ body {
     background-attachment: fixed;
     font-family: 'Bahn', Arial, sans-serif;
     font-weight: 400;
+    font-variation-settings: "wght" 450, "wdth" 95;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     color: #333;
-}
-
-@supports (font-variation-settings: "wght" 500) {
-    body {
-        font-variation-settings: "wght" 450, "wdth" 95;
-    }
 }
 
 main {

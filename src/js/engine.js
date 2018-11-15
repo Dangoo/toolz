@@ -33,13 +33,6 @@ export default function (typeCode, locoClass, indentureNumber, country, owner) {
       UICindentureNumber,
     ].join(''));
 
-    console.log([
-      this.typeCode,
-      this.countryCode,
-      UIClocoClass,
-      UICindentureNumber,
-    ].join(''));
-
     const parts = [
       this.typeCode,
       this.countryCode,

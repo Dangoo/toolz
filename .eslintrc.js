@@ -1,6 +1,11 @@
 module.exports = {
-    "extends": "airbnb-base",
-    "env": {
-        "browser": true
-    }
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "key-spacing": ["error", {
+      "align": "value"
+    }]
+  }
 };

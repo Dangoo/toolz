@@ -105,15 +105,19 @@ label {
     display: inline;
 }
 
-body {
-    display: flex;
-    box-sizing: border-box;
-    padding: 1em 0 2em;
+html {
     background-image: url(../img/gravita.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
+    background-color: #333;
+}
+
+body {
+    display: flex;
+    box-sizing: border-box;
+    padding: 1em 0 2em;
     font-family: 'Bahn', Arial, sans-serif;
     font-weight: 400;
     font-variation-settings: "wght"450, "wdth"95;

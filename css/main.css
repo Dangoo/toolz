@@ -5,7 +5,7 @@
 @font-face {
     font-family: 'Bahn';
     src: local('Bahnschrift'),
-         url('../fonts/din1451alt-webfont.woff') format('woff');
+        url('../fonts/din1451alt-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -73,12 +73,24 @@ textarea {
    Interface styles
    ========================================================================== */
 
-::-webkit-input-placeholder { color:#999; }
-::-moz-placeholder { color:#999; } /* firefox 19+ */
-input:-moz-placeholder { color:#999; }
+::-webkit-input-placeholder {
+    color: #999;
+}
 
-h1, h2, h3,
-.button_round, .button, 
+::-moz-placeholder {
+    color: #999;
+}
+
+/* firefox 19+ */
+input:-moz-placeholder {
+    color: #999;
+}
+
+h1,
+h2,
+h3,
+.button_round,
+.button,
 label {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -104,7 +116,7 @@ body {
     background-attachment: fixed;
     font-family: 'Bahn', Arial, sans-serif;
     font-weight: 400;
-    font-variation-settings: "wght" 450, "wdth" 95;
+    font-variation-settings: "wght"450, "wdth"95;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     color: #333;
@@ -123,14 +135,13 @@ main {
     margin-bottom: .5em;
     background: url(../img/beta_flag.png) 95% 0 no-repeat;
     background-size: 10%;
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 7px 18px rgba(0,0,0,0.75),
-                inset 0 1px 0 rgba(255,255,255,0.5),
-                inset 0 -1px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.5);
 }
 
-ul, li {
+ul,
+li {
     list-style-type: none;
 }
 
@@ -186,11 +197,10 @@ h1 {
 
 input,
 .select_native,
-.binary-input_native + .binary-input_custom {
+.binary-input_native+.binary-input_custom {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.35), 0 1px 0 #fff;
-    border: 1px solid #cacece;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     outline: none;
     font-family: inherit;
     color: inherit;
@@ -198,10 +208,10 @@ input,
     transition-property: border-color, box-shadow;
 }
 
-input:focus, 
+input:focus,
 .select_native:focus,
-.binary-input_native:focus + .binary-input_custom {
-    border-color: currentColor;
+.binary-input_native:focus+.binary-input_custom {
+    border-color: rgb(0, 0, 0);
 }
 
 input[type=text] {
@@ -250,7 +260,7 @@ input[type=text] {
     display: inline-block;
     width: 100%;
     height: inherit;
-    padding: 0 1em 0 .5em;
+    padding: 0 1.5em 0 .5em;
     border-radius: inherit;
 }
 
@@ -265,19 +275,19 @@ input[type=text] {
     -webkit-font-smoothing: antialiased;
     font-size: 1.5em;
     line-height: 1;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.65);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
     outline: none;
     transition: box-shadow 0.1s;
 }
 
 .button:hover,
 .button:focus {
-    box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5); */
     background: #e30000;
 }
 
 .button:active {
-    box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+    /* box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5); */
     background: #c31006;
 }
 
@@ -285,7 +295,7 @@ input[type=text] {
     border-color: #333333;
 }
 
-.button.button--primary {
+.button--primary {
     position: -webkit-sticky;
     position: sticky;
     bottom: 0.5em;
@@ -293,7 +303,7 @@ input[type=text] {
     background: #db0000;
     border-color: #af0000;
 }
- 
+
 /* RADIO */
 
 ul.checklist {
@@ -309,13 +319,13 @@ ul.checklist {
     display: flex;
     align-items: flex-start;
     padding: 5px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .binary-input-with-label--nested {
     padding-left: calc(2em + 5px);
 }
- 
+
 .binary-input_native {
     -webkit-appearance: none;
     appearance: none;
@@ -325,7 +335,7 @@ ul.checklist {
     height: 1.5em;
     cursor: pointer;
 }
- 
+
 .binary-input_custom {
     flex-grow: 0;
     flex-shrink: 0;
@@ -341,12 +351,12 @@ ul.checklist {
     transition: background-color .1s ease-in;
 }
 
-.binary-input_native:disabled + .binary-input_custom {
+.binary-input_native:disabled+.binary-input_custom {
     color: #999;
     background-color: transparent;
 }
 
-.binary-input_native:disabled ~ .binary-input_label {
+.binary-input_native:disabled~.binary-input_label {
     cursor: not-allowed;
 }
 
@@ -357,27 +367,27 @@ ul.checklist {
     transition: transform .1s ease-in;
 }
 
-.binary-input_native[type=radio] + .binary-input_custom {
+.binary-input_native[type=radio]+.binary-input_custom {
     border-radius: 50%;
 }
 
-.binary-input_native[type=radio] + .binary-input_custom::after {
+.binary-input_native[type=radio]+.binary-input_custom::after {
     width: 50%;
     height: 50%;
     border-radius: 50%;
     background: currentColor;
 }
 
-.binary-input_native[type=checkbox] + .binary-input_custom::after {
+.binary-input_native[type=checkbox]+.binary-input_custom::after {
     content: '✔';
 }
 
-.binary-input_native:checked + .binary-input_custom::after {
+.binary-input_native:checked+.binary-input_custom::after {
     transform: scale(1);
 }
- 
+
 .binary-input_custom:active {
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 1px 0 #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 #fff;
 }
 
 .binary-input_label {
@@ -392,8 +402,8 @@ ul.checklist {
     transform-origin: 0 50%;
 }
 
-.binary-input_native:focus ~ .binary-input_label,
-.binary-input_native:not(:disabled) ~ .binary-input_label:hover,
+.binary-input_native:focus~.binary-input_label,
+.binary-input_native:not(:disabled)~.binary-input_label:hover,
 .meta-bar a:hover {
     transform: scale(1.05);
 }
@@ -403,9 +413,9 @@ ul.checklist {
     width: 100%;
     font-size: .75em;
     padding: 0 2em;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    text-shadow: 0 0 2px rgba(0,0,0,0.75);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
 }
 
 .meta-bar a,
@@ -420,7 +430,7 @@ ul.checklist {
 }
 
 .meta-bar a:hover {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 
